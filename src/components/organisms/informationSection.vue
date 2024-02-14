@@ -28,11 +28,12 @@ const errorMessage = ref({
 })
 const emailSuccess = ref(false);
 
-function setEmailError(errorMessage) {
+function setEmailError(message) {
     console.log('setEmailError @ infoSection');
+    console.log(message);
     emailError.value = true;
     emailSuccess.value = false;
-    errorMessage.value.email = errorMessage;
+    errorMessage.value.email = message;
 }
 function setEmailSuccess() {
     console.log('setEmailSuccess @ infoSection');
