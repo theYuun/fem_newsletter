@@ -6,6 +6,7 @@ import Label from './label.vue';
 import List from './list.vue'
 import ListIndex from './listIndex.vue';
 import Paragraph from './paragraph.vue';
+import Span from './span.vue';
 
 export default {
     Divider,
@@ -16,4 +17,5 @@ export default {
     List,
     ListIndex,
     Paragraph,
+    Span,
 }
