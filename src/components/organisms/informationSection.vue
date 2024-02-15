@@ -1,16 +1,24 @@
 <script setup>
-import { ref, defineEmits } from 'vue';
+import { ref, defineEmits, defineProps } from 'vue';
 import atoms from '../atoms/atoms';
+import molecules from '../molecules/molecules';
+
+const props = defineProps({
+    listData: {
+        type: Array,
+    }
+})
 
 const emits = defineEmits(['emailSuccessFromInfoSection']);
 
-const Divider = atoms.Divider;
-const Heading1 = atoms.Heading1;
-const Paragraph = atoms.Paragraph;
+const EmailContainer = molecules.EmailContainer;
+const InfoDivider = molecules.InfoDivider;
+const InfoHeading1 = molecules.InfoHeading;
+const InfoParagraph = molecules.InfoParagraph;
+const InfoList = molecules.InfoList;
 const Label = atoms.Label;
-const List = atoms.List;
-const Input = atoms.Input;
 const Span = atoms.Span;
+const Input = atoms.Input;
 
 const inputStrings = ref({
     email: '',
@@ -47,29 +55,40 @@ function setEmailSuccess() {
 </script>
 
 <template>
-    <Divider>
-        <Heading1 :text="'Stay updated!'" />
-        <Paragraph :text="'Join 60,000+ product managers receiving monthly updates on:'" />
-        <List :data="['Product discovery and building what matters', 'Measuring to ensure updates are a success', 'And much more!']" />
-        <Divider>
-            <Label :text="'Email Address'" :labelFor="'emailInput'" />
-            <Span v-if="emailError" :text="errorMessage.email" />
-            <Input :type="'email'" @setStringsFromInput="setStrings" :placeholder="'email@company.com'" :id="'emailInput'" />
-            <!--
-                Possible function for function prop:
-                'sendEmailAddress'
-                'dismissSuccessDialog'
-             -->
-    
+    <InfoDivider>
+        <InfoHeading1
+            :text="'Stay updated!'" />
+        <InfoParagraph
+            :text="'Join 60,000+ product managers receiving monthly updates on:'" />
+        <InfoList
+            :data="props.listData" />
+        <EmailContainer>
+            <Label
+                :text="'Email address'"
+                :labelFor="'emailInput'" />
+            <Span
+                v-show="emailError"
+                :text="errorMessage.email" />
             <Input
-                :type="'button'"
-                :function="'sendEmailAddress'"
-                :data="inputStrings"
-                @emailErrorFromButton="(data) => setEmailError(data)"
-                @emailSuccessFromButton="setEmailSuccess"
-                :buttonText="'Subscribe to monthly newsletter'" />
-        </Divider>
-    </Divider>
+                :type="'email'"
+                @setStringsFromInput="setStrings"
+                :placeholder="'email@company.com'"
+                :id="'emailInput'" />
+            
+        </EmailContainer>
+        <!--
+            Possible function for :function prop on :type="'button'":
+            'sendEmailAddress'
+            'dismissSuccessDialog'
+            -->
+        <Input
+            :type="'button'"
+            :function="'sendEmailAddress'"
+            :data="inputStrings"
+            @emailErrorFromButton="(data) => setEmailError(data)"
+            @emailSuccessFromButton="setEmailSuccess"
+            :buttonText="'Subscribe to monthly newsletter'" />
+    </InfoDivider>
 </template>
 
 <style scoped>

@@ -90,5 +90,29 @@ const exposedFunctions = computed(() => functions)
         :value="props.buttonText" />
 </template>
 
-<style scoped>
+<style>
+    input[type=email] {
+        border-radius: 7.5px;
+        border: 1px solid #000;
+        margin-top: 11px;
+        padding: 17px 23px 18px;
+        font-size: 1rem;
+        grid-column: span 2;
+    }
+    input[type=button] {
+        width: 100%;
+        border-radius: 7.5px;
+        border: none;
+        padding-top: 20px;
+        padding-bottom: 17px;
+        background-color: #000;
+        text-align: center;
+        font-family: "Roboto Bold";
+        font-size: 1rem;
+        color: #fff;
+    }
+    input[type=button]:hover {
+        background-color: var(--colorTomato);
+        cursor: pointer;
+    }
 </style>

@@ -1,9 +1,7 @@
 import InfrmationSection from './informationSection.vue';
-import ImageSection from './imageSection.vue';
-import Success from './dialogSuccess.vue';
+import SuccessSection from './successSection.vue';
 
 export default {
     InfrmationSection,
-    ImageSection,
-    Success,
+    SuccessSection,
 }

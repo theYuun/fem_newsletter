@@ -10,4 +10,10 @@ const props = defineProps({
 </template>
 
 <style scoped>
+    span {
+        font-family: "Roboto Bold";
+        font-size: 0.75rem;
+        text-align: right;
+        color: var(--colorTomato);
+    }
 </style>

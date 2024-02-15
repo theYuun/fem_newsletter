@@ -15,4 +15,11 @@ const props = defineProps({
 </template>
 
 <style scoped>
+    ul {
+        margin: 24px;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 </style>

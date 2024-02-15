@@ -2,10 +2,13 @@
 </script>
 
 <template>
-    <div>
+    <div class="successButtonContainer">
         <slot></slot>
     </div>
 </template>
 
 <style scoped>
+    .successButtonContainer {
+        margin-bottom: 40px;
+    }
 </style>

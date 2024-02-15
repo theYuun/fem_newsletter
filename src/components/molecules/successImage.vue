@@ -1,23 +1,21 @@
 <script setup>
 const props = defineProps({
-    data: {
+    path: {
         type: String,
         required: true,
     },
-    index: {
+    altText: {
         type: String,
     }
 })
 </script>
 
 <template>
-    <li>{{ props.data }}</li>
+    <img class="successImage" :src="props.path" :alt="props.altText" :aria-label="`${props.altText}.`" />
 </template>
 
 <style scoped>
-    li {
-        padding-left: 37px;
-        line-height: 1.5rem;
-        position: relative;
+    .successImage {
+        width: 64px;
     }
 </style>

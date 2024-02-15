@@ -4,14 +4,18 @@ import organisms from '../organisms/organisms';
 import molecules from '../molecules/molecules';
 
 const SignupDivider = molecules.SignupDivider;
-const ImageSection = organisms.ImageSection;
+const Image = molecules.ImageSectionImage;
 const InformationSection = organisms.InfrmationSection;
-const DialogSuccess = organisms.Success;
+const SuccessSection = organisms.SuccessSection;
 
 const emailSuccess = ref(false);
 const stringInputs = ref({
     email: '',
 })
+const listData = ref([
+    'Product discovery and building what matters',
+    'Measuring to ensure updates are a success',
+    'And much more!'])
 
 function setEmailSuccess(data) {
     console.log('emailSuccess @ signup')
@@ -29,10 +33,19 @@ function dismissEmailSuccess() {
 
 <template>
     <SignupDivider>
-        <ImageSection />
-        <InformationSection @emailSuccessFromInfoSection="setEmailSuccess" />
+        <Image
+            :path="'/fem_newsletter/images/illustration-sign-up-mobile.svg'"
+            :altText="''" />
+        <InformationSection
+            @emailSuccessFromInfoSection="setEmailSuccess"
+            :listData="listData" />
     </SignupDivider>
-    <DialogSuccess v-show="emailSuccess" @dismissSuccessFromSuccessDialog="dismissEmailSuccess" :email="stringInputs.email" />
+    <!--
+        v-show="emailSuccess"
+    -->
+    <SuccessSection
+        @dismissSuccessFromSuccessDialog="dismissEmailSuccess"
+        :email="stringInputs.email" />
 </template>
 
 <style scoped>

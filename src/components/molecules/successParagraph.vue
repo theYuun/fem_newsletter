@@ -1,23 +1,19 @@
 <script setup>
 const props = defineProps({
-    data: {
+    text: {
         type: String,
         required: true,
-    },
-    index: {
-        type: String,
     }
 })
 </script>
 
 <template>
-    <li>{{ props.data }}</li>
+    <p class="dismissParagraph">{{ props.text }}</p>
 </template>
 
 <style scoped>
-    li {
-        padding-left: 37px;
+    .dismissParagraph {
+        margin-top: 24px;
         line-height: 1.5rem;
-        position: relative;
     }
 </style>

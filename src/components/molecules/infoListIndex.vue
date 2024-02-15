@@ -1,4 +1,5 @@
 <script setup>
+import molecules from '../molecules/molecules';
 const props = defineProps({
     data: {
         type: String,
@@ -8,14 +9,15 @@ const props = defineProps({
         type: String,
     }
 })
+const InfoListImage = molecules.InfoListImage;
 </script>
 
 <template>
-    <li>{{ props.data }}</li>
+    <li class="infoListIndex"><InfoListImage :src="'/fem_newsletter/images/icon-list.svg'" />{{ props.data }}</li>
 </template>
 
 <style scoped>
-    li {
+    .infoListIndex {
         padding-left: 37px;
         line-height: 1.5rem;
         position: relative;
