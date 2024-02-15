@@ -5,9 +5,16 @@
     <div class="infoDivider"><slot></slot></div>
 </template>
 
-<style scoped>
+<style>
     .infoDivider {
-        grid-area: "info";
-        margin-top: 37px;
+        grid-area: info;
+        margin-top: 12px;
+        padding: 24px;
+        padding-right: 16px;
+    }
+    @media (min-width: 376px) {
+        .infoDivider {
+
+        }
     }
 </style>

@@ -34,19 +34,22 @@ function dismissEmailSuccess() {
 <template>
     <SignupDivider>
         <Image
-            :path="'/fem_newsletter/images/illustration-sign-up-mobile.svg'"
+            :pathMobile="'/fem_newsletter/images/illustration-sign-up-mobile.svg'"
+            :pathFull="'/fem_newsletter/images/illustration-sign-up-desktop.svg'"
             :altText="''" />
         <InformationSection
             @emailSuccessFromInfoSection="setEmailSuccess"
             :listData="listData" />
     </SignupDivider>
     <!--
-        v-show="emailSuccess"
+        // This is here in case I need to temp remove the `v-if`
+        // of the SuccessSection
     -->
     <SuccessSection
+        v-show="emailSuccess"
         @dismissSuccessFromSuccessDialog="dismissEmailSuccess"
         :email="stringInputs.email" />
 </template>
 
-<style scoped>
+<style>
 </style>

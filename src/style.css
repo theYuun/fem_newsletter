@@ -61,15 +61,11 @@ body {
 }
 
 @media (min-width: 376px) {
-  /*
+  
   body {
     max-width: 1440px;
     display: flex;
-  }
-  
-  #app {
-    width: 500px;
-    background-color: green;
+    background-color: #000;
   }
 
   .refMob {
@@ -78,5 +74,5 @@ body {
   .refFull {
     opacity: 0.5;
   }
-  */
+  
 }

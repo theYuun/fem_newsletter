@@ -11,11 +11,11 @@ const props = defineProps({
 
 const emits = defineEmits(['emailSuccessFromInfoSection']);
 
-const EmailContainer = molecules.EmailContainer;
 const InfoDivider = molecules.InfoDivider;
 const InfoHeading1 = molecules.InfoHeading;
 const InfoParagraph = molecules.InfoParagraph;
 const InfoList = molecules.InfoList;
+const InfoEmailContainer = molecules.InfoEmailContainer;
 const Label = atoms.Label;
 const Span = atoms.Span;
 const Input = atoms.Input;
@@ -62,7 +62,7 @@ function setEmailSuccess() {
             :text="'Join 60,000+ product managers receiving monthly updates on:'" />
         <InfoList
             :data="props.listData" />
-        <EmailContainer>
+        <InfoEmailContainer>
             <Label
                 :text="'Email address'"
                 :labelFor="'emailInput'" />
@@ -75,7 +75,7 @@ function setEmailSuccess() {
                 :placeholder="'email@company.com'"
                 :id="'emailInput'" />
             
-        </EmailContainer>
+        </InfoEmailContainer>
         <!--
             Possible function for :function prop on :type="'button'":
             'sendEmailAddress'
@@ -91,5 +91,5 @@ function setEmailSuccess() {
     </InfoDivider>
 </template>
 
-<style scoped>
+<style>
 </style>

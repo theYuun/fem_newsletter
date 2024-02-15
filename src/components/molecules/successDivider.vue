@@ -12,8 +12,9 @@
         position: absolute;
         inset: 0;
         background-color: white;
-        padding: 0 24px;
         padding-top: 150px;
+        padding-left: 24px;
+        padding-right: 16px;
         display: flex;
         flex-direction: column;
     }

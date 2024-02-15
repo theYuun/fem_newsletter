@@ -22,7 +22,6 @@ const InfoListIndex = molecules.InfoListIndex;
 
 <style scoped>
     .infoList {
-        margin: 0 24px;
         margin-top: 24px;
         list-style-type: none;
         display: flex;

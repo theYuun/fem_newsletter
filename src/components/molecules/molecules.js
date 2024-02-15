@@ -1,6 +1,6 @@
-import EmailContainer from './emailContainer.vue';
 import ImageSectionImage from './imageSectionImage.vue';
 import InfoDivider from './infoDivider.vue';
+import InfoEmailContainer from './infoEmailContainer.vue';
 import InfoList from './infoList.vue';
 import InfoListImage from './infoListImage.vue';
 import InfoListIndex from './infoListIndex.vue';
@@ -15,9 +15,9 @@ import SuccessParagraph from './successParagraph.vue';
 import SuccessSpacer from './successSpacer.vue';
 
 export default {
-    EmailContainer,
     ImageSectionImage,
     InfoDivider,
+    InfoEmailContainer,
     InfoList,
     InfoListImage,
     InfoListIndex,

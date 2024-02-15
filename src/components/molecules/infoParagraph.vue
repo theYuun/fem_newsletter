@@ -13,7 +13,6 @@ const props = defineProps({
 
 <style scoped>
     .infoParagraph {
-        margin: 0 24px;
         margin-top: 20px;
         line-height: 1.5rem;
         background-color: orange;

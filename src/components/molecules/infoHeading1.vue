@@ -13,7 +13,6 @@ const props = defineProps({
 
 <style scoped>
     .infoHeading {
-        margin: 0 24px;
         font-size: 2.4rem;
         letter-spacing: 0.75px;
         font-family: 'Roboto Bold';

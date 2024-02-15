@@ -36,7 +36,7 @@ function dismissSuccess() {
         <SuccessHeading1
             :text="'Thanks for subscribing!'" />
         <SuccessParagraph
-            :text="`A confirmation email has been sent to ${props.email}. Please open it and click the button to confirm your subscription.`" />
+            :text="`A confirmation email has been sent to ${props.email}. Please open it and click the button inside to confirm your subscription.`" />
         <SuccessSpacer />
         <SuccessButtonContainer>
             <Input

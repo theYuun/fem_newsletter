@@ -9,6 +9,6 @@
 
 <style scoped>
     .successButtonContainer {
-        margin-bottom: 40px;
+        margin-bottom: 53px;
     }
 </style>
