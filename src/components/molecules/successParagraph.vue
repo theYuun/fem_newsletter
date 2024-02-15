@@ -11,9 +11,15 @@ const props = defineProps({
     <p class="dismissParagraph">{{ props.text }}</p>
 </template>
 
-<style scoped>
+<style>
     .dismissParagraph {
         margin-top: 24px;
         line-height: 1.5rem;
+    }
+    @media (min-width: 376px) {
+        .dismissParagraph {
+            margin: 0 64px;
+            margin-top: 24px;
+        }  
     }
 </style>

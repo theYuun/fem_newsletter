@@ -53,6 +53,7 @@ onUnmounted(() => {
 
     .signupImageFull {
         margin: 26px;
+        margin-top: 24px;
         width: calc(100% - 52px);
     }
 </style>

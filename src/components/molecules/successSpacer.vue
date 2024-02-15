@@ -7,8 +7,14 @@
     </div>
 </template>
 
-<style scoped>
+<style>
     .successSpacer {
         flex: 1;
+    }
+    @media (min-width: 376px) {
+        .successSpacer {
+            margin: 0;
+            padding: 0;
+        }
     }
 </style>

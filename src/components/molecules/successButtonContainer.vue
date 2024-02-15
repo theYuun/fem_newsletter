@@ -7,8 +7,14 @@
     </div>
 </template>
 
-<style scoped>
+<style>
     .successButtonContainer {
-        margin-bottom: 53px;
+        margin-bottom: 60px;
+    }
+    @media (min-width: 376px) {
+        .successButtonContainer {
+            margin: 0 64px;
+            margin-bottom: 62px;
+        }
     }
 </style>

@@ -16,7 +16,7 @@ const InfoListImage = molecules.InfoListImage;
     <li class="infoListIndex"><InfoListImage :src="'/fem_newsletter/images/icon-list.svg'" />{{ props.data }}</li>
 </template>
 
-<style scoped>
+<style>
     .infoListIndex {
         padding-left: 37px;
         line-height: 1.5rem;

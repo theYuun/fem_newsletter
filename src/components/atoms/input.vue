@@ -93,7 +93,7 @@ const exposedFunctions = computed(() => functions)
 <style>
     input[type=email] {
         border-radius: 7.5px;
-        border: 1px solid #000;
+        border: 1px solid var(--colorDarkSlateGrey);
         margin-top: 11px;
         padding: 17px 23px 18px;
         font-size: 1rem;
@@ -105,14 +105,14 @@ const exposedFunctions = computed(() => functions)
         border: none;
         padding-top: 20px;
         padding-bottom: 17px;
-        background-color: #000;
+        background-color: var(--colorDarkSlateGrey);
         text-align: center;
         font-family: "Roboto Bold";
         font-size: 1rem;
         color: #fff;
     }
     input[type=button]:hover {
-        background-color: var(--colorTomato);
+        background: var(--buttonGradient);
         cursor: pointer;
     }
 </style>

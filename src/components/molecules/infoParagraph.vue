@@ -11,10 +11,9 @@ const props = defineProps({
     <p class="infoParagraph">{{ props.text }}</p>
 </template>
 
-<style scoped>
+<style>
     .infoParagraph {
         margin-top: 20px;
         line-height: 1.5rem;
-        background-color: orange;
     }
 </style>

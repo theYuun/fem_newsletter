@@ -14,7 +14,7 @@ const props = defineProps({
     <li>{{ props.data }}</li>
 </template>
 
-<style scoped>
+<style>
     li {
         padding-left: 37px;
         line-height: 1.5rem;

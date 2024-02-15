@@ -9,7 +9,7 @@ const props = defineProps({
     <span v-if="!props.text"><slot></slot></span>
 </template>
 
-<style scoped>
+<style>
     span {
         font-family: "Roboto Bold";
         font-size: 0.75rem;

@@ -9,6 +9,7 @@
 
 <style>
     .signupDiv {
+        position: static;
         display: grid;
         grid-template-areas:
             "image"

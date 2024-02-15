@@ -14,8 +14,14 @@ const props = defineProps({
     <img class="successImage" :src="props.path" :alt="props.altText" :aria-label="`${props.altText}.`" />
 </template>
 
-<style scoped>
+<style>
     .successImage {
         width: 64px;
+    }
+    @media (min-width: 376px) {
+        .successImage {
+            margin-left: 64px;
+            margin-top: 48px;
+        }
     }
 </style>

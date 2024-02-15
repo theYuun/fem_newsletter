@@ -14,7 +14,7 @@ const props = defineProps({
     <img class="listIcon" :src="props.path" :alt="props.altText" :aria-label="`${props.altText}.`" />
 </template>
 
-<style scoped>
+<style>
     .listIcon {
         content: '';
         position: absolute;

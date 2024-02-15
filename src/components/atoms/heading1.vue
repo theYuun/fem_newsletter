@@ -11,5 +11,5 @@ const props = defineProps({
     <h1>{{ props.text }}</h1>
 </template>
 
-<style scoped>
+<style>
 </style>

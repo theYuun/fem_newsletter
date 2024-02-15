@@ -16,7 +16,7 @@ const props = defineProps({
     </label>
 </template>
 
-<style scoped>
+<style>
     label {
         font-family: "Roboto Bold";
         font-size: 0.75rem;

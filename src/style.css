@@ -19,6 +19,7 @@
   --colorCharcoalGrey: hsl(235, 18%, 26%);
   --colorGrey: hsl(231, 7%, 60%);
   --colorWhite: hsl(0, 0%, 100%);
+  --buttonGradient: linear-gradient(90deg, hsl(347, 99%, 66%), hsl(14, 99%, 61%));
 
   /* Font */
   font-family: 'Roboto';
@@ -29,26 +30,26 @@
 * {
   margin: 0;
   padding: 0;
+  color: var(--colorDarkSlateGrey);
   /*
   */
-  outline: 1px dashed #000;
 }
 
 body {
   position: relative;
   max-width: 375px;
   overflow-x: hidden;
-  display: static;
 }
 
 #app {
+  position: relative;
   width: 100%;
 }
 
 .refMob, .refFull {
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 0;
   width: 375px;
   opacity: 0.5;
   pointer-events: none;
@@ -58,14 +59,15 @@ body {
 .refFull {
   width: 1440px;
   opacity: 0;
+  margin-top: -220px;
+  margin-left: calc(calc(100% - 1440px) / 2);
 }
 
 @media (min-width: 376px) {
   
   body {
-    max-width: 1440px;
-    display: flex;
-    background-color: #000;
+    max-width: unset;
+    background-color: var(--colorDarkSlateGrey);
   }
 
   .refMob {

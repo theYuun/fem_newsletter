@@ -1,11 +1,13 @@
 <script setup>
-import ListIndex from './atoms';
+import atoms from './atoms';
 const props = defineProps({
     data: {
         type: Array,
         required: true,
     }
 })
+
+const ListIndex = atoms.ListIndex;
 </script>
 
 <template>
@@ -14,7 +16,7 @@ const props = defineProps({
     </ul>
 </template>
 
-<style scoped>
+<style>
     ul {
         margin: 24px;
         list-style-type: none;
